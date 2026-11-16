@@ -1,0 +1,112 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101311">
+    <title>Field Kit — Icon Studio</title>
+    <link rel="stylesheet" href="{% static 'studio/styles.css' %}">
+    <script src="{% static 'studio/app.js' %}" defer></script>
+  </head>
+  <body>
+    <main class="studio">
+      <header class="masthead">
+        <a class="wordmark" href="/" aria-label="Field Kit home">
+          <span class="wordmark-mark" aria-hidden="true">F</span>
+          FIELD KIT
+        </a>
+        <span class="edition">ICON STUDIO <span aria-hidden="true">/</span> 01</span>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow"><span class="status-dot"></span> POCKET-SIZED, PERSONAL</p>
+        <h1 id="page-title">Make it <span>yours.</span></h1>
+        <p class="intro-copy">A little icon workshop for your everyday carry. Pick a symbol, set its color, and take your creation with you.</p>
+      </section>
+
+      <section class="workbench" aria-label="Icon designer">
+        <div class="preview-panel">
+          <div class="panel-topline">
+            <span>LIVE PREVIEW</span>
+            <span class="preview-size">512 <span aria-hidden="true">×</span> 512</span>
+          </div>
+          <div class="preview-stage">
+            <div class="preview-glow" aria-hidden="true"></div>
+            <canvas id="main-preview" width="512" height="512" role="img" aria-label="3D-style phone app icon preview"></canvas>
+          </div>
+          <div class="preview-caption">
+            <div>
+              <span class="caption-label">YOUR ICON</span>
+              <h2 id="selected-name">Phone</h2>
+            </div>
+            <button class="download-button" id="download-button" type="button">
+              <span aria-hidden="true">↓</span> DOWNLOAD PNG
+            </button>
+          </div>
+          <p class="download-note" id="download-note" aria-live="polite">A 512 × 512 transparent PNG, ready to copy to your device.</p>
+        </div>
+
+        <div class="controls-panel">
+          <div class="control-group">
+            <div class="group-heading">
+              <span class="step-number">01</span>
+              <div>
+                <h2>Choose a symbol</h2>
+                <p>Eight little essentials</p>
+              </div>
+            </div>
+            <div class="icon-grid" id="icon-grid" aria-label="Available icon designs">
+              <button class="icon-option is-selected" type="button" data-icon="phone" aria-pressed="true" aria-label="Phone icon">
+                <canvas width="112" height="112" aria-hidden="true"></canvas><span>Phone</span>
+              </button>
+              <button class="icon-option" type="button" data-icon="messages" aria-pressed="false" aria-label="Messages icon">
+                <canvas width="112" height="112" aria-hidden="true"></canvas><span>Messages</span>
+              </button>
+              <button class="icon-option" type="button" data-icon="contacts" aria-pressed="false" aria-label="Contacts icon">
+                <canvas width="112" height="112" aria-hidden="true"></canvas><span>Contacts</span>
+              </button>
+              <button class="icon-option" type="button" data-icon="camera" aria-pressed="false" aria-label="Camera icon">
+                <canvas width="112" height="112" aria-hidden="true"></canvas><span>Camera</span>
+              </button>
+              <button class="icon-option" type="button" data-icon="maps" aria-pressed="false" aria-label="Maps icon">
+                <canvas width="112" height="112" aria-hidden="true"></canvas><span>Maps</span>
+              </button>
+              <button class="icon-option" type="button" data-icon="music" aria-pressed="false" aria-label="Music icon">
+                <canvas width="112" height="112" aria-hidden="true"></canvas><span>Music</span>
+              </button>
+              <button class="icon-option" type="button" data-icon="shield" aria-pressed="false" aria-label="Shield icon">
+                <canvas width="112" height="112" aria-hidden="true"></canvas><span>Shield</span>
+              </button>
+              <button class="icon-option" type="button" data-icon="folder" aria-pressed="false" aria-label="Folder icon">
+                <canvas width="112" height="112" aria-hidden="true"></canvas><span>Folder</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="control-group color-group">
+            <div class="group-heading">
+              <span class="step-number">02</span>
+              <div>
+                <h2>Set the mood</h2>
+                <p>Choose your base color</p>
+              </div>
+            </div>
+            <div class="swatches" id="swatches" aria-label="Icon colors">
+              <button class="swatch is-selected" type="button" data-color="#e78050" aria-label="Terracotta" aria-pressed="true"><span></span></button>
+              <button class="swatch" type="button" data-color="#8f79df" aria-label="Iris" aria-pressed="false"><span></span></button>
+              <button class="swatch" type="button" data-color="#4f9bd1" aria-label="Tide" aria-pressed="false"><span></span></button>
+              <button class="swatch" type="button" data-color="#58a88a" aria-label="Fern" aria-pressed="false"><span></span></button>
+              <button class="swatch" type="button" data-color="#d6aa59" aria-label="Ochre" aria-pressed="false"><span></span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>MADE FOR SMALL SCREENS</span>
+        <span>YOUR ICONS STAY YOURS <span aria-hidden="true">↗</span></span>
+      </footer>
+    </main>
+  </body>
+</html>
